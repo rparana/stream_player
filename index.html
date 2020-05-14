@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste player</title>
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.2.45/css/materialdesignicons.min.css">
+    <style>
+        /* RESET
+--------*/
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: inherit;
+}
+
+html,
+body {
+  background-color: #12295f;
+  max-width: 100%;
+}
+.topo {
+  padding: 40px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.btn-player {
+  display: flex;
+  cursor: pointer;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  background: #c1c1c1;
+  font-size: 14px;
+  color: #000;
+  margin: 0 20px;
+  padding: 5px 10px 5px;
+  border-radius: 16px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.btn-player span {
+    margin-right: 10px;
+}
+
+.section.flyer-player {
+    position: fixed;
+    display: grid;
+    grid-template-areas: "controle" "player";
+    width: 400px;
+    height: 320px;
+    z-index: 500;
+    -webkit-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    right: 0;
+    bottom: 0;
+}
+.section.flyer-player .operate-box {
+    grid-area: controle;
+    justify-self: self-start;
+    background-color: rgba(96, 96, 96, 0.6);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: space-between;
+    align-content: center;
+    border-radius: 10px 10px 0 0px;
+    width: 100%;
+    cursor: grab;
+}
+
+.section.flyer-player .operate-box span {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.section.flyer-player .operate-box .title {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: 5px;
+}
+.section.flyer-player .operate-box .title {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.player-content {
+    display: flex;
+    grid-area: player;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    background: rgba(96, 96, 96, 0.6);
+}
+.player {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.hide{
+      display: none !important;
+
+}
+.body{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 720px;
+    color: #fff;
+    height: 2500px;
+}
+    </style>
+  </head>
+  <body>
+      
+    <div class="topo">
+      <div class="btn-player" id="btn-flyer"><span class="mdi mdi-television"></span>Assistir no rodapé</div>
+      <!-- <div class="btn-player" url="testeplayer.html" id="btn-newwin"><span class="mdi mdi-television"></span>Assistir em outra janela</div> -->
+    </div>
+
+    <div class="body">
+        <p>
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id ex pulvinar, lobortis nisi nec, cursus tellus. In hac habitasse platea dictumst. Proin eu porta tellus, vitae finibus felis. Fusce eu consequat nisl, in consectetur ipsum. Aenean sed ornare enim, at ornare elit. Nulla sed est in nulla commodo laoreet eget sit amet urna. Ut tellus magna, facilisis in tellus vel, ullamcorper tincidunt tortor. Sed pulvinar dapibus purus, nec finibus dolor vehicula eget. Suspendisse pellentesque, mauris quis tincidunt posuere, ex nunc ultricies urna, vitae viverra tellus libero at arcu. Maecenas dignissim est sapien, sed viverra metus efficitur ut. Donec tempus, enim quis lacinia finibus, massa elit sodales mi, eget suscipit lectus nulla et tellus. Nam vel odio vel ex molestie laoreet sed quis erat.
+    </p>
+<p>
+
+    Cras rhoncus urna ut augue sagittis aliquet. Nulla facilisi. Cras finibus, neque ac euismod vulputate, erat sem posuere tellus, et commodo neque justo vehicula augue. Quisque vitae sem sit amet sem posuere vulputate ut a quam. Aliquam eget sapien quam. Maecenas sit amet ipsum ornare, facilisis leo et, feugiat urna. Nullam non sem sed enim blandit elementum vitae in nisl. Cras quis ultricies erat. Curabitur auctor in nulla in iaculis. Phasellus id erat mi. Phasellus ornare at massa ac ullamcorper. Aliquam augue neque, ullamcorper sit amet augue ac, viverra mattis eros. Donec accumsan dignissim ligula, vel feugiat lacus suscipit sed. Fusce eget tincidunt dolor. Quisque bibendum nibh odio, at faucibus nisl ultrices nec.
+</p>
+<p>
+
+    Aliquam erat volutpat. Suspendisse sed urna eu nisi hendrerit mollis. Aliquam accumsan aliquet mauris nec gravida. Nulla laoreet ante in interdum placerat. Pellentesque ornare dui ac volutpat cursus. Pellentesque mattis placerat scelerisque. Nulla malesuada suscipit nulla, commodo scelerisque ex hendrerit quis. Donec id turpis sed neque faucibus accumsan vitae id magna. Vestibulum sit amet hendrerit ex, ut pharetra nisi. In vehicula placerat pretium.
+</p>
+<p>
+
+    Nullam nisi augue, hendrerit ut sapien et, egestas aliquet dolor. Vivamus gravida viverra eros. Nulla feugiat elementum porta. Phasellus vitae velit magna. Sed arcu dui, convallis et lacus in, facilisis viverra elit. Nulla placerat augue eget arcu facilisis, vel dictum erat fringilla. Donec laoreet interdum magna, sit amet efficitur sem ultricies et. Sed pharetra lacus ex, sit amet bibendum odio dapibus eu. Vestibulum vestibulum elit nec massa elementum sagittis. Maecenas malesuada semper lectus, at hendrerit felis ornare id.
+</p>
+<p>
+
+    Praesent dignissim risus suscipit dui bibendum egestas. Maecenas vulputate odio aliquam vulputate malesuada. Donec sed turpis at nibh ultrices tincidunt sollicitudin sed justo. Curabitur mauris purus, tincidunt ut mattis quis, pharetra vitae felis. Aenean semper mollis metus quis malesuada. Ut pulvinar auctor aliquet. Integer porttitor maximus ultrices. Proin nibh purus, mattis id scelerisque quis, consequat vel sem.
+</p>
+    </div>
+
+        <!-- Inicio Player -->
+    <section id="flyer-player" class="section flyer-player " data-turbolinks-permanent>
+      <div class="operate-box">
+          <div class="title"><span class="mdi mdi-drag"></span> Rede Massa - Online</div>
+          <div class="close">
+              <span class="mdi mdi-close btn-open-close"></span>
+          </div>
+      </div>
+    <div class="player-content ">
+      <div class="player" id="player"></div>
+    </div>
+      </div>
+    </section>
+    <!-- Fim Player -->
+
+  </body>
+  <script>
+    document.querySelector(".btn-open-close").addEventListener("click", close_player);
+    // document.querySelector("#btn-newwin").addEventListener("click", (e)=>{
+    //     (e || window.event).preventDefault();
+    //     window.open(document.querySelector("#btn-newwin").getAttribute('url'), 'Player', 'width=500,height=400')
+    // });
+    document.querySelector("#btn-flyer").addEventListener("click", load_home);
+    function load_home(e) {
+      (e || window.event).preventDefault();
+      //var clientHeight = document.querySelector(".player-content").clientHeight;
+      var clientHeight = (screen.height/100)*30;
+      console.log(clientHeight);
+      var ifrm = document.createElement("iframe");
+      ifrm.setAttribute("id", "ifrm"); 
+      ifrm.setAttribute("allowfullscreen", ""); 
+      ifrm.setAttribute("allow", "autoplay; fullscreen"); 
+      ifrm.setAttribute("frameborder", "0"); 
+
+      ifrm.addEventListener('click', acao)
+      ifrm.setAttribute("width", "100%"); 
+      //ifrm.setAttribute("height", clientHeight); 
+      //document.body.appendChild(ifrm); // to place at end of document
+        document.querySelector(".player-content").classList.remove("hide");
+        document.querySelector(".flyer-player").classList.remove("hide");
+      // to place before another page element
+      var el = document.getElementById("player");
+      //el.parentNode.insertBefore(ifrm, el);
+
+      el.innerHTML = ""
+      el.appendChild(ifrm);
+
+      // assign url
+      ifrm.setAttribute("src", "https://player.jmvstream.com/lvw/bgng4N66rmweEcKLFS2rV3TBg7l9WL");
+      iniciarPIP(ifrm)
+    }
+    function close_player(e) {
+      (e || window.event).preventDefault();
+      //var clientHeight = document.querySelector(".player-content").clientHeight;
+        document.querySelector(".flyer-player").classList.add("hide");
+      // to place before another page element
+      var el = document.getElementById("player");
+      //el.parentNode.insertBefore(ifrm, el);
+
+      el.innerHTML = ""
+    }
+    function acao(e)
+    {
+        console.log(e);
+    }
+    async function iniciarPIP(e){
+    //const video = document.querySelector('#meu-video');
+    await e.requestPictureInPicture();
+}
+
+
+
+var moverclass = {
+    /**
+     * 
+     * @returns {undefined}
+     */
+    __init: function () {
+        
+        var elem = document.querySelector('body'),
+                div = document.querySelector('.flyer-player'),
+                title=document.querySelector('.section.flyer-player .operate-box'),
+                x = 0,
+                y = 0,
+                mousedown = false;
+
+        // div event mousedown
+        div.addEventListener('mousedown', function (e) {
+            // maus state auf true setzen
+            mousedown = true;
+            title.style.cursor="grabbing"
+            // offset abziehen
+            x = div.offsetLeft - e.clientX;
+            y = div.offsetTop - e.clientY;
+        }, true);
+
+        // div event mouseup
+        div.addEventListener('mouseup', function (e) {
+            // maus state auf false setzen
+            title.style.cursor="grab"
+            mousedown = false;
+        }, true);
+
+        // element mousemove um zu stoppen
+        elem.addEventListener('mousemove', function (e) {
+            e.preventDefault();
+            // Ist maus gedruekt
+            if (mousedown) {
+                // jetzt rechnen wir die differenz rauf
+                div.style.left = e.clientX + x + 'px';
+                div.style.top = e.clientY + y + 'px';
+            }
+        }, true);
+
+    }
+};
+
+moverclass.__init();
+
+
+
+  </script>
+</html>
